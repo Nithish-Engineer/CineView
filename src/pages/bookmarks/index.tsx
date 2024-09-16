@@ -1,19 +1,27 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import Layout from '../../layouts'
 import SearchBar from '../home/Search';
 
 import { Card, GridContainer } from '../../Styles';
-import { moviesData } from '../../assets/data';
+import { MovieContext } from '../../context';
+
 function Bookmark() {
+  const {state, dispatch} = useContext(MovieContext);
+
+  useEffect(() => {
+    dispatch({type: "Bookmark"});
+  },[])
+
   return (
     <>
     <Layout >
       <div style={{display: 'flex',flexDirection: 'column', width: '100%', height: '100%'}}>
-      <SearchBar />
-       <GridContainer>     
-      { moviesData.filter( tew => tew.isBookmarked).map(movie => { 
+      {/* <SearchBar /> */}
+        <h2>🔖 Bookmark</h2>    
+       <GridContainer>
+      { state.filteredData?.map(movie => { 
         return (
-          <Card>
+          <Card key={movie.title}>
           <img src={movie.thumbnail.regular.medium} alt={movie.title} />
           <h6>{movie.year}&nbsp;&bull;&nbsp;{movie.category}&nbsp;&bull;&nbsp;{movie.rating}</h6>
           <h4>{movie.title}</h4>

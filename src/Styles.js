@@ -8,7 +8,8 @@ export const SearchIcon = styled(FaSearch)`
     height:1.5rem;
     position:relative;
     right: 4%;
-    top: 6%;
+    transform: translateY(6px);
+    cursor: pointer;
 `
 
 export const Main = styled.div`
@@ -87,9 +88,14 @@ export const GridContainer = styled.div`
         outline: 'none',
         width: '50%',
         padding: '1%',
+        color: '#245426e3',
         fontSize: 'larger',
         border: '0.2rem solid #245426e3',
     '&:focus-visible': {
         borderColor: '#245426e3',
+    },
+
+    '&::placeholder': {
+        color: '#245426e3',
     }
     }))
