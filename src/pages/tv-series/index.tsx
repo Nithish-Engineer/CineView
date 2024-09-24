@@ -1,9 +1,9 @@
 import React, { useContext, useEffect } from 'react'
 import Layout from '../../layouts'
-import SearchBar from '../home/Search';
 
 import { Card, GridContainer } from '../../Styles';
 import { MovieContext } from '../../context';
+import { ItemsContainer } from '../../Styles';
 
 function TVSeries() {
 const {state, dispatch} = useContext(MovieContext);
@@ -13,8 +13,7 @@ dispatch({type: "TvSeries"});
   return (
     <>
     <Layout >
-      <div style={{display: 'flex',flexDirection: 'column', width: '100%', height: '100%'}}>
-      {/* <SearchBar /> */}
+      <ItemsContainer>
       <h2>🎬 Tv Series</h2>
        <GridContainer>     
       { state.filteredData?.map(movie => { 
@@ -27,7 +26,7 @@ dispatch({type: "TvSeries"});
        )
       })}
       </GridContainer>
-      </div>
+      </ItemsContainer>
         </Layout>
     </>
   )

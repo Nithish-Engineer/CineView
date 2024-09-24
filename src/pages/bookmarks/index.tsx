@@ -1,9 +1,9 @@
 import React, { useContext, useEffect } from 'react'
 import Layout from '../../layouts'
-import SearchBar from '../home/Search';
 
 import { Card, GridContainer } from '../../Styles';
 import { MovieContext } from '../../context';
+import { ItemsContainer } from '../../Styles';
 
 function Bookmark() {
   const {state, dispatch} = useContext(MovieContext);
@@ -15,8 +15,7 @@ function Bookmark() {
   return (
     <>
     <Layout >
-      <div style={{display: 'flex',flexDirection: 'column', width: '100%', height: '100%'}}>
-      {/* <SearchBar /> */}
+      <ItemsContainer>
         <h2>🔖 Bookmark</h2>    
        <GridContainer>
       { state.filteredData?.map(movie => { 
@@ -29,7 +28,7 @@ function Bookmark() {
        )
       })}
       </GridContainer>
-      </div>
+      </ItemsContainer>
         </Layout>
     </>
   )

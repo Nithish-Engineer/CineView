@@ -2,7 +2,7 @@ import { createContext, ReactNode, useReducer } from "react";
 
 import { MovieDataType, moviesData } from "../assets/data";
 
-interface MovieState {
+export interface MovieState {
     movies: MovieDataType[];
     trendingList?: MovieDataType[];
     recommendedList?: MovieDataType[];

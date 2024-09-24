@@ -5,8 +5,6 @@ import { Search,SearchIcon } from '../../Styles'
 interface SearchBarprops {
    onchangeHandle: (e: string) => void;
 }
-
-
 function SearchBar({onchangeHandle}: SearchBarprops ) {
   const [search, setSearch] = useState<string>("");
 

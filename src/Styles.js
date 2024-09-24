@@ -15,6 +15,8 @@ export const SearchIcon = styled(FaSearch)`
 export const Main = styled.div`
 margin:0;
 padding: 0;
+height: 100vh;
+min-height: 100vh;
 display: flex;
 background-color: cadetblue;
 @media (max-width: 786px) {
@@ -25,10 +27,11 @@ export const LeftSide = styled.div(() => ({
     padding: '5px',
     textWrap: 'nowrap',
     display: 'flex',
+    overflow: 'hidden',
     alignItems: 'flex-start',
     flexDirection: 'column',
     background: '#1f8f69',
-    borderTopBottomRadius: '1rem',
+    borderBottomRightRadius: '1rem',
     borderTopRightRadius: '1rem',
     '@media (max-width: 786px)': {
           flexDirection: 'row'
@@ -98,4 +101,14 @@ export const GridContainer = styled.div`
     '&::placeholder': {
         color: '#245426e3',
     }
-    }))
+    }));
+
+    export const ItemsContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    scrollbar-color: green cadetblue;
+    `
