@@ -60,6 +60,6 @@ To get started with the CineView project, follow these steps:
 
 ## Built By
 
-- **[Nithish Reddy]** - *Creator* - [GitHub Profile](https://github.com/Nithish-Engineer)
+- **Nithish Reddy** - [GitHub Profile](https://github.com/Nithish-Engineer)
 
 This project was built to enhance my skills in modern web development technologies, particularly focusing on React, TypeScript, and state management.
